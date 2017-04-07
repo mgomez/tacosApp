@@ -62,12 +62,3 @@ Handlebars.registerHelper('dateFormat', function(date) {
 Handlebars.registerHelper('dateFormatHour', function(date) {
     return moment(date, "YYYY-MM-DD HH:mm").format("YYYY-MM-DD HH:mm");
 });
-$.get('views/Saldo/saldo-partial.hbs', function(data) {
-    Handlebars.registerPartial("movimientosSaldo", data);
-});
-$.get('views/CuentaMaestra/cuenta-maestra-partial.hbs', function(data) {
-    Handlebars.registerPartial("movimientosCuentaMaestra", data);
-});
-$.get('views/Bloqueo/bloqueo-partial.hbs', function(data) {
-    Handlebars.registerPartial("getBlockCard", data);
-});

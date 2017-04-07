@@ -1,0 +1,72 @@
+/* ==========================================================================
+   @zkar13
+   ========================================================================== */
+
+@desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
+@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
+@mobile: ~"only screen and (max-width: 480px)";
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background: #000 url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Macondo', cursive;
+}
+
+#page {
+    overflow: auto;
+}
+
+.tacoTitle {
+    background: #fff;
+    padding: 15px 0px;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+.tacoContainer {
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.33);
+    & img {
+        display: inline-block;
+        width: 80%;
+    }
+}
+
+.rolTableContainer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    & .rolTable {
+        width: 100%;
+        border-spacing: 0;
+        & th {
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            padding: 8px;
+            border-bottom: 2px solid #eee;
+        }
+        & tr {
+            border-bottom: 1px solid rgba(255, 255, 255, .3);
+        }
+        & td {
+            color: #eee;
+            text-align: center;
+            padding: 8px;
+        }
+    }
+}
