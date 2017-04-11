@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0K9FjXt9FN6DBjXADTvO2nZ1gbBtdqx4",
+        authDomain: "viernesdetacos-87e4e.firebaseapp.com",
+        databaseURL: "https://viernesdetacos-87e4e.firebaseio.com",
+        projectId: "viernesdetacos-87e4e",
+        storageBucket: "viernesdetacos-87e4e.appspot.com",
+        messagingSenderId: "649666774506"
+      };
+      firebase.initializeApp(config);
+      // Get a reference to the database service
+      var database = firebase.database();
+    </script>
 </head>
 
 <body>
@@ -30,33 +45,7 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Maru</td>
-                        <td>07 de Abril</td>
-                        <td>Si</td>
-                    </tr>
-                    <tr>
-                        <td>Manuel</td>
-                        <td>14 de Abril</td>
-                        <td>NO</td>
-                    </tr>
-                    <tr>
-                        <td>Carlos Bonilla</td>
-                        <td>21 de Abril</td>
-                        <td>NO</td>
-                    </tr>
-                    <tr>
-                        <td>Chino</td>
-                        <td>28 de Abril</td>
-                        <td>NO</td>
-                    </tr>
-                    <tr>
-                        <td>Angel</td>
-                        <td>05 de Mayo</td>
-                        <td>NO</td>
-                    </tr>
-                </tbody>
+                <tbody id="rolTable-content"></tbody>
             </table>
         </div>
     </div>

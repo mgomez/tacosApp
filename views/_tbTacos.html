@@ -1,0 +1,12 @@
+{{#each this}}
+    <tr>
+        <td>
+            <div class="avatar">
+                <img src="{{foto}}" alt="foto" class="avatar-img">
+                <span class="avatar-nombre">{{nombre}}</span>
+            </div>
+        </td>
+        <td>{{fecha}}</td>
+        <td>{{ternary listo "Si" "No"}}</td>
+    </tr>
+{{/each}}
