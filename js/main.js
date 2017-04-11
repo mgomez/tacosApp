@@ -1,11 +1,15 @@
 var Usuarios;
 $(function() {
+    $("#NewImg").draggable();
     var tacosDB = firebase.database().ref('/usuarios');
 
     tacosDB.on('value', function(data) {
         var usuarios = data.val();
         $.get("views/_tbTacos.html", function(template) {
             $("#rolTable-content").handlebars(template, usuarios);
+            $("#rolTable-content").sortable({
+                revert: true
+            });
             Usuarios = usuarios;
         });
     });
