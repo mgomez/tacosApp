@@ -1,2 +1,2 @@
 # tacosApp
-App de tacos
+Ejemplo de una aplicacion con Phonegap, App de tacos
